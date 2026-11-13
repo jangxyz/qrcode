@@ -12,6 +12,8 @@ This repository builds the same tool with several tech stacks for comparison. Ea
 
 ## electron-ts
 
+<img src="docs/electron-ts.png" alt="QR Generator desktop app" width="360">
+
 Requires Node 22.18 or later, because the CLI runs its TypeScript source directly with Node, without a build step.
 
 ```sh

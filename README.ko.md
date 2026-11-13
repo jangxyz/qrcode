@@ -12,6 +12,8 @@
 
 ## electron-ts
 
+<img src="docs/electron-ts.png" alt="QR Generator 데스크탑 앱" width="360">
+
 Node 22.18 이상이 필요하다. CLI가 TypeScript 파일을 빌드 없이 Node로 바로 실행하기 때문이다.
 
 ```sh
