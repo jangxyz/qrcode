@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
+  <rect x="100" y="100" width="824" height="824" rx="185" fill="#1f2a44"/>
+  <path fill="#ffffff" fill-rule="evenodd" d="M332 232h360a100 100 0 0 1 100 100v360a100 100 0 0 1-100 100H332a100 100 0 0 1-100-100V332a100 100 0 0 1 100-100z M362 312a50 50 0 0 0-50 50v300a50 50 0 0 0 50 50h300a50 50 0 0 0 50-50V362a50 50 0 0 0-50-50z"/>
+  <rect x="392" y="392" width="240" height="240" rx="56" fill="#4fd1c5"/>
+  <circle cx="468" cy="468" r="36" fill="#ffffff"/>
+</svg>
