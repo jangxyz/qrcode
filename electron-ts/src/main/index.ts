@@ -5,6 +5,12 @@ import { electronApp, optimizer, is } from '@electron-toolkit/utils'
 import icon from '../../resources/icon.png?asset'
 import { toPng, toSvg, type QrFormat } from './qr.mts'
 
+// --lang=en forces a UI language, e.g. for screenshots; otherwise use the first preferred system language.
+function uiLanguage(): string {
+  const arg = process.argv.find((a) => a.startsWith('--lang='))
+  return arg ? arg.slice('--lang='.length) : (app.getPreferredSystemLanguages()[0] ?? 'en')
+}
+
 function createWindow(): void {
   // Create the browser window.
   const mainWindow = new BrowserWindow({
@@ -30,10 +36,11 @@ function createWindow(): void {
 
   // HMR for renderer base on electron-vite cli.
   // Load the remote URL for development or the local html file for production.
+  const lang = uiLanguage()
   if (is.dev && process.env['ELECTRON_RENDERER_URL']) {
-    mainWindow.loadURL(process.env['ELECTRON_RENDERER_URL'])
+    mainWindow.loadURL(`${process.env['ELECTRON_RENDERER_URL']}?lang=${lang}`)
   } else {
-    mainWindow.loadFile(join(__dirname, '../renderer/index.html'))
+    mainWindow.loadFile(join(__dirname, '../renderer/index.html'), { query: { lang } })
   }
 }
 

@@ -14,11 +14,17 @@
 
   <body>
     <main>
-      <textarea id="text" rows="3" placeholder="URL이나 텍스트를 입력하세요" autofocus></textarea>
+      <textarea
+        id="text"
+        rows="3"
+        data-i18n-placeholder="TEXT_PLACEHOLDER"
+        placeholder="URL이나 텍스트를 입력하세요"
+        autofocus
+      ></textarea>
       <div id="preview"></div>
       <div class="actions">
-        <button id="save-svg" disabled>SVG로 저장</button>
-        <button id="save-png" disabled>PNG로 저장</button>
+        <button id="save-svg" data-i18n="SAVE_SVG" disabled>SVG로 저장</button>
+        <button id="save-png" data-i18n="SAVE_PNG" disabled>PNG로 저장</button>
       </div>
       <p id="status"></p>
     </main>

@@ -1,3 +1,5 @@
+import { applyStaticText, setText } from './i18n'
+
 const input = document.querySelector<HTMLTextAreaElement>('#text')!
 const preview = document.querySelector<HTMLDivElement>('#preview')!
 const statusLine = document.querySelector<HTMLParagraphElement>('#status')!
@@ -30,15 +32,16 @@ async function render(): Promise<void> {
   } catch {
     if (id !== latest) return
     preview.replaceChildren()
-    statusLine.textContent = '내용이 너무 길어서 QR 코드로 만들 수 없어요.'
+    setText(statusLine, 'STATUS_TOO_LONG')
   }
 }
 
 async function save(format: 'svg' | 'png'): Promise<void> {
   const path = await window.api.saveQr(input.value, format)
-  if (path) statusLine.textContent = `저장했어요: ${path}`
+  if (path) setText(statusLine, 'STATUS_SAVED', { path })
 }
 
+applyStaticText()
 input.addEventListener('input', render)
 saveButtons.svg.addEventListener('click', () => save('svg'))
 saveButtons.png.addEventListener('click', () => save('png'))
