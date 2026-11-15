@@ -12,7 +12,7 @@
 
 ## electron-ts
 
-<img src="docs/electron-ts.png" alt="QR Generator 데스크탑 앱" width="360">
+<img src="docs/electron-ts.ko.png" alt="QR Generator 데스크탑 앱" width="360">
 
 Node 22.18 이상이 필요하다. CLI가 TypeScript 파일을 빌드 없이 Node로 바로 실행하기 때문이다.
 
@@ -28,6 +28,8 @@ npm run dev
 ```
 
 입력창에 텍스트를 넣으면 QR 코드가 바로 미리보기로 그려지고, "SVG로 저장"과 "PNG로 저장" 버튼으로 파일을 저장한다. 내용이 QR 코드에 담을 수 있는 길이를 넘으면 안내 문구가 뜬다.
+
+앱 문구는 영어와 한국어를 지원하고, 시스템의 첫 번째 선호 언어를 따른다. 언어를 직접 고르려면 `open -a "QR Generator" --args --lang=ko`처럼 `--lang`을 주고 띄운다. 앱이 이미 떠 있으면 먼저 종료해야 한다.
 
 ### qr-gen CLI
 

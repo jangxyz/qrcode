@@ -27,7 +27,9 @@ npm install
 npm run dev
 ```
 
-Type text into the input box and the QR code preview updates as you type. Save it with the "SVG로 저장" (Save as SVG) or "PNG로 저장" (Save as PNG) button. If the text is too long to fit in a QR code, a message says so.
+Type text into the input box and the QR code preview updates as you type. Save it with the "Save as SVG" or "Save as PNG" button. If the text is too long to fit in a QR code, a message says so.
+
+The app is in English and Korean and follows your first preferred system language. To pick one explicitly, launch it with `--lang`, e.g. `open -a "QR Generator" --args --lang=ko` (quit the app first if it is already running).
 
 ### qr-gen CLI
 
