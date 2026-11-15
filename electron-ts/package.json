@@ -47,5 +47,6 @@
     "type": "git",
     "url": "https://github.com/jangxyz/qrcode.git",
     "directory": "electron-ts"
-  }
+  },
+  "license": "MIT"
 }

@@ -42,3 +42,7 @@ echo -n "텍스트" | npm run qr-gen -- -o a.png       # stdin으로 받아 PNG�
 어느 디렉토리에서든 `qr-gen`으로 실행하려면 `electron-ts/`에서 `npm link`를 한 번 실행한다. 프로젝트 파일을 가리키는 링크라서 코드를 고치면 바로 반영된다. 지울 때는 패키지 이름으로 `npm rm -g qr-gen`을 실행한다.
 
 GUI와 CLI는 같은 생성 모듈(`src/main/qr.mts`)을 쓰므로 같은 입력이면 같은 QR 코드가 나온다.
+
+## 라이선스
+
+[MIT](LICENSE)

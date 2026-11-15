@@ -42,3 +42,7 @@ Without `-o`, the QR code is drawn in the terminal and no file is written. With 
 To run `qr-gen` from any directory, run `npm link` once inside `electron-ts/`. It links to the project files, so code changes take effect immediately. To remove it, use the package name: `npm rm -g qr-gen`.
 
 The GUI and the CLI share the same generator module (`src/main/qr.mts`), so the same input always produces the same QR code.
+
+## License
+
+[MIT](LICENSE)
