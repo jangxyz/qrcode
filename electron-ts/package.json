@@ -13,13 +13,14 @@
     "typecheck": "npm run typecheck:node && npm run typecheck:web",
     "start": "electron-vite preview",
     "dev": "electron-vite dev",
-    "build": "npm run typecheck && electron-vite build",
+    "build": "npm run typecheck && npm run check:i18n && electron-vite build",
     "postinstall": "install-electron && electron-builder install-app-deps",
     "build:unpack": "npm run build && electron-builder --dir",
     "build:win": "npm run build && electron-builder --win",
     "build:mac": "npm run build && electron-builder --mac",
     "build:linux": "npm run build && electron-builder --linux",
-    "qr-gen": "node src/cli/qr-gen.mts"
+    "qr-gen": "node src/cli/qr-gen.mts",
+    "check:i18n": "node scripts/check-i18n.mts"
   },
   "dependencies": {
     "@electron-toolkit/preload": "^3.0.2",
